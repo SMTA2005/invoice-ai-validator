@@ -403,7 +403,7 @@ with tab1:
 
 # ---------- TAB 2: Manual Text (Fallback) ----------
 with tab2:
-    st.markdown("<div class='glass-card'>", unsafe_allow_html=True)
+    # st.markdown("<div class='glass-card'>", unsafe_allow_html=True)
     manual_text = st.text_area("Paste invoice text here (no OCR needed):", height=250)
     if st.button("Classify Text", type="primary"):
         if manual_text.strip():
