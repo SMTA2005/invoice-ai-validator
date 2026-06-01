@@ -340,7 +340,8 @@ def extract_text_with_groq(image_base64):
     prompt = "Extract all visible text from this invoice. Preserve line breaks as much as possible. Do not add any extra text."
     headers = {"Authorization": f"Bearer {GROQ_API_KEY}", "Content-Type": "application/json"}
     payload = {
-        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "model": "llama-3.3-70b-versatile",
+        # "model": "meta-llama/llama-4-scout-17b-16e-instruct",
         "messages": [{"role": "user", "content": [{"type": "text", "text": prompt}, {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{image_base64}"}}]}],
         "max_tokens": 2048,
         "temperature": 0.0
